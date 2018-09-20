@@ -35,12 +35,12 @@ namespace dotnetcore_tests
         }
 
         [TestMethod]
-        public void Should_Fail()
+        public void Should_Not_Fail()
         {
             // Arrange
             // Act
             // Assert
-            Assert.AreEqual(42, 99, "Expected 42 to be the result");
+            Assert.AreEqual(42, 42, "Expected 42 to be the result");
         }
     }
 }
