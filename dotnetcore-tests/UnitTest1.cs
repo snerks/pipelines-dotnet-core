@@ -40,7 +40,7 @@ namespace dotnetcore_tests
             // Arrange
             // Act
             // Assert
-            Assert.AreEqual(42, 99, "Expected 42 to be the result");
+            Assert.AreEqual(42, 999, "Expected 42 to be the result");
         }
     }
 }
