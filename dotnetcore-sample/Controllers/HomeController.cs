@@ -10,7 +10,7 @@ namespace dotnetcore_sample.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(); mmm
         }
 
         public IActionResult About()
