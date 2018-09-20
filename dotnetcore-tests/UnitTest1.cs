@@ -33,5 +33,14 @@ namespace dotnetcore_tests
           // Assert
           Assert.AreEqual("Your contact page.", result.ViewData["Message"]);
         }
+
+        [TestMethod]
+        public void Should_Fail()
+        {
+            // Arrange
+            // Act
+            // Assert
+            Assert.AreEqual(42, 99, "Expected 42 to be the result");
+        }
     }
 }
