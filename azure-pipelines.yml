@@ -10,20 +10,14 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+- script: |
+    dotnet build --configuration $(buildConfiguration)
 
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-- script: |
-    dotnet publish --configuration $(buildConfiguration) --output $BUILD_ARTIFACTSTAGINGDIRECTORY
-
 - task: PublishTestResults@2
   inputs:
     testRunner: VSTest
